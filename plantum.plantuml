@@ -1,0 +1,54 @@
+@startuml trabalho
+
+title Concessionaria
+
+class Pessoa{
+    - nome: string
+    - endereco: string
+    - numero: int
+    + cadastrar_pessoa(nome, endereco, numero)
+
+}
+class Pessoa_fisica{
+    - cpf: int
+    - idade: int
+    - pessoa: Pessoa
+    + cadastrar_pessoa_fisica(cpf, idade, pessoa)
+}
+class Pessoa_juridica{
+    - cnpj: int
+    - ano_de_fundacao: int
+    - pessoa: Pessoa
+    + cadastrar_pessoa_juridica(cnpj, ano_de_fundacao, pessoa)
+}
+class Funcionario{
+    - pessoa_fisica: Pessoa_fisica
+    - cargo: string
+    - concessionaria: Concessionaria
+    + cadastrar_funcionario(pessoa_fisica, cargo)
+}
+class Carro{
+    - marca: string
+    - tipo: string
+    - ano: int
+    + registrar_carro(marca, tipo, ano)
+
+}
+class Concessionaria{
+    - endereco: string
+    - cnpj: int
+    - carro: Carro
+    - pessoa_fisica: Pessoa_fisica
+    - pessoa_juridica: Pessoa_fisica
+    + vender_carro_pessoa_fisica(carro, pessoa_fisica)
+    + vender_carro_pessoa_juridica(carro, pessoa_juridica)
+}
+
+Pessoa <|-- Pessoa_fisica
+Pessoa <|-- Pessoa_juridica
+Pessoa_fisica <|-- Funcionario
+Concessionaria o-- Carro
+Concessionaria o-- Pessoa_juridica
+Concessionaria o-- Pessoa_fisica
+
+@enduml
