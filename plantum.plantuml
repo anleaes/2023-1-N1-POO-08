@@ -32,24 +32,31 @@ class Carro{
     - tipo: string
     - ano: int
     + registrar_carro(marca, tipo, ano)
+}
+class Moto{
+    - marca: string
+    - ano: int
+    - cilindradas: int
+    + registrar_moto(marca, ano, cilindradas)
 
 }
 class Concessionaria{
     - endereco: string
     - cnpj: int
     - carro: Carro
-    - pessoa_fisica: Pessoa_fisica
-    - pessoa_juridica: Pessoa_fisica
-    + vender_carro_pessoa_fisica(carro, pessoa_fisica)
-    + vender_carro_pessoa_juridica(carro, pessoa_juridica)
+    - moto: Moto
+    - pessoa: Pessoa
+    + vender_carro(carro, pessoa)
     + consultar_carros(carro)
+    + vender_moto(moto, pessoa)
+    + consultar_moto(moto)
+
 }
 
 Pessoa <|-- Pessoa_fisica
 Pessoa <|-- Pessoa_juridica
-
-Concessionaria o-- Carro
-Concessionaria o-- Pessoa_juridica
-Concessionaria o-- Pessoa_fisica
+Pessoa *-- Concessionaria
+Carro *--Concessionaria
+Moto *--Concessionaria
 
 @enduml
