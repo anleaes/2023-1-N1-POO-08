@@ -42,11 +42,12 @@ class Concessionaria{
     - pessoa_juridica: Pessoa_fisica
     + vender_carro_pessoa_fisica(carro, pessoa_fisica)
     + vender_carro_pessoa_juridica(carro, pessoa_juridica)
+    + consultar_carros(carro)
 }
 
 Pessoa <|-- Pessoa_fisica
 Pessoa <|-- Pessoa_juridica
-Pessoa_fisica <|-- Funcionario
+
 Concessionaria o-- Carro
 Concessionaria o-- Pessoa_juridica
 Concessionaria o-- Pessoa_fisica
