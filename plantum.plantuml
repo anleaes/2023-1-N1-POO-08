@@ -43,6 +43,7 @@ class Moto{
 class Concessionaria{
     - endereco: string
     - cnpj: int
+    - numero_da_concessionaria
     - carro: Carro
     - moto: Moto
     - pessoa: Pessoa
