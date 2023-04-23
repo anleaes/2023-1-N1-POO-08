@@ -6,5 +6,3 @@ class Concessionaria:
         self._carro = carro
         self._moto = moto
         self._pessoa = pessoa
-
-        #######
