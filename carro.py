@@ -1,5 +1,7 @@
-class Carro:
-    def __init__(self, marca, ano, tipo):
-        self.marca = marca
-        self.ano = ano
-        self.tipo = tipo
+from veiculo import Veiculo
+
+class Carro(Veiculo):
+    def __init__(self, marca, modelo, ano, preco, cor, placa):
+        super().__init__(marca, modelo, ano, preco)
+        self.cor = cor
+        self.placa = placa
