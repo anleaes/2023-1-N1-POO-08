@@ -1,15 +1,17 @@
 from pessoa import Pessoa
 
 class Cliente(Pessoa):
-    def __init__(self, nome, cpf, idade, endereco, email, telefone):
-        super().__init__(nome, cpf, idade, endereco)
-        self.email = email
+    def __init__(self, nome, cpf, idade, endereco, telefone):
+        super().__init__(nome, cpf, idade)
+        self.endereco = endereco
         self.telefone = telefone
-        self.ingressos_comprados = []
+        self.veiculos_comprados = []
 
-    def comprar_ingresso(self, ingresso):
-        self.ingressos_comprados.append(ingresso)
-        print("Ingresso vendido para o cliente", self.nome)
+    # def registrar_compra(self, veiculo):
+    #     self.veiculos_comprados.append(veiculo)
+    #     return "Compra realizada com sucesso!"
 
-    def mostrar_ingresso(self):
-        return self.filme.titulo, self.filme.duracao, self.filme.genero, self.horario, self.preco
+
+    def comprar_carro(self, carro):
+        self.veiculos_comprados.append(carro)
+        print(f"{self.nome} comprou um {carro.modelo}, {carro.marca} por R${carro.preco:.2f}")
