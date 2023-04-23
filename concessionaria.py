@@ -1,4 +1,5 @@
 class Concessionaria:
+<<<<<<< HEAD
     def __init__(self, nome):
         self.nome = nome
         self.clientes = []
@@ -53,3 +54,13 @@ class Concessionaria:
             if vendedor.nome == nome:
                 return vendedor
         print(f"Não foi encontrado nenhum vendedor com o nome {nome}.")
+=======
+    
+    def __init__(self, endereco, cnpj, numero_da_concessionaria, carro, moto, pessoa):
+        self._endereco = endereco
+        self._cnpj = cnpj
+        self._numero_da_concessionaria = numero_da_concessionaria
+        self._carro = carro
+        self._moto - moto
+        self._pessoa = pessoa
+>>>>>>> d9d0dc94a7284e7cac2c9c2f98a7cc7fb7cd2b8d
