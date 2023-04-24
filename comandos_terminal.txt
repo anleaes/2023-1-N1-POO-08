@@ -43,5 +43,5 @@ Concessionaria.adicionar_carro_ao_estoque(concessionaria1, carro2)
 Concessionaria.listar_carros_em_estoque(concessionaria1)
 Concessionaria.registrar_vendedor(concessionaria1, funcionario1)
 
-
-
+Concessionaria.encontrar_carro_por_modelo(concessionaria1, "skyline")
+Concessionaria.encontrar_funcionario_por_nome(concessionaria1, "henrrique")
